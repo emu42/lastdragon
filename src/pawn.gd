@@ -135,6 +135,8 @@ func reset():
 func can_act():
 	return (can_move or can_attack) and curr_health > 0
 
+func has_hp():
+	return curr_health > 0
 
 func _load_stats():
 	move_radious = Utils.get_pawn_move_radious(pawn_class)

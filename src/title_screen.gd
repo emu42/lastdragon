@@ -2,7 +2,8 @@ extends Control
 
 
 func _on_game_start():
-	get_tree().change_scene_to_file("res://assets/tscn/level01/level01level.tscn")
+	#get_tree().change_scene_to_file("res://assets/tscn/level01/level01level.tscn")
+	get_tree().change_scene_to_file("res://assets/tscn/level02/level02level.tscn")
 	pass # Replace with function body.
 
 

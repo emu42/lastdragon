@@ -47,6 +47,11 @@ func move_pawn():
 	if curr_pawn.path_stack.is_empty(): 
 		stage = 3
 
+func has_unit_with_hp():
+	for pawn in get_children():
+		if pawn.has_hp(): return true
+	return false
+
 
 func choose_pawn_to_attack():
 	arena.reset()
