@@ -1,6 +1,6 @@
 const TILE_SRC = "res://src/tile.gd"
 
-enum PAWN_CLASSES {Knight, Archer, Paladin, Zombie, Skeleton_Archer, Imp}
+enum PAWN_CLASSES {Knight, Archer, Paladin, Zombie, Skeleton_Archer, Imp, Dragon}
 enum HERO_CLASSES {Princess, Necromancer}
 enum PAWN_STRATEGIES {Tank, Flank, Support}
 
@@ -43,6 +43,7 @@ const SKELETON_ARCHER_SPRITE = "res://assets/sprites/characters/necromancerUnits
 #const DARK_ALCHEMIST_SPRITE = "res://assets/sprites/characters/necromancerUnits"
 #const NECROMANCER_LORD_SPRITE = "res://assets/sprites/characters/necromancerUnits"
 const IMP_SPRITE = "res://assets/sprites/characters/necromancerUnits/chr_pawn_imp.png"
+#const DRAGON_SPRITE = "res://assets/sprites/characters/necromancerUnits/chr_pawn_dragon.png"
 
 static func convert_tiles_into_static_bodies(tiles_obj):
 
@@ -98,6 +99,7 @@ static func get_pawn_sprite(pawn_class):
 		3: return load(ZOMBIE_SPRITE)
 		4: return load(SKELETON_ARCHER_SPRITE)
 		5: return load(IMP_SPRITE)
+		#6: return load(DRAGON_SPRITE)
 	
 
 static func get_pawn_move_radious(pawn_class):
@@ -109,7 +111,7 @@ static func get_pawn_move_radious(pawn_class):
 		3: return 3
 		4: return 5
 		5: return 5
-		#6: return 4
+		#6: return 15
 
 
 static func get_pawn_jump_height(pawn_class):
@@ -121,7 +123,7 @@ static func get_pawn_jump_height(pawn_class):
 		3: return 0.5
 		4: return 0.5
 		5: return 10
-		#6: return 1
+		#6: return 10
 
 
 static func get_pawn_attack_radious(pawn_class):
@@ -133,7 +135,7 @@ static func get_pawn_attack_radious(pawn_class):
 		3: return 1
 		4: return 6
 		5: return 2
-		#6: return 3
+		#6: return 6
 
 
 static func get_pawn_attack_power(pawn_class):
@@ -145,7 +147,7 @@ static func get_pawn_attack_power(pawn_class):
 		3: return 17
 		4: return 39
 		5: return 27
-		#6: return 12
+		#6: return 123
 
 
 static func get_pawn_health(pawn_class):
@@ -157,7 +159,7 @@ static func get_pawn_health(pawn_class):
 		3: return 34
 		4: return 55
 		5: return 41
-		#6: return 30
+		#6: return 1350
 
 
 static func vector_remove_y(vector):
