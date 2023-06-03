@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="godot-tactical-rpg"
-run/main_scene="res://assets/tscn/test_level.tscn"
+run/main_scene="res://assets/tscn/test_level_test.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://icons/icon.png"
 
@@ -23,6 +23,10 @@ window/size/viewport_height=800
 [dotnet]
 
 project/assembly_name="godot-tactical-rpg"
+
+[filesystem]
+
+import/fbx/enabled=false
 
 [input]
 
