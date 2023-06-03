@@ -1,7 +1,6 @@
 [gd_scene load_steps=295 format=3 uid="uid://u0fvpexymxuq"]
 
 [ext_resource type="Script" path="res://src/arena.gd" id="1_k7i8s"]
-[ext_resource type="Texture2D" uid="uid://de5n2kamxkku6" path="res://level_01_wiese2.png" id="2_jjtd3"]
 
 [sub_resource type="BoxShape3D" id="1"]
 
@@ -2885,11 +2884,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_uxiap")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wm6qv"]
+load_path = "res://.godot/imported/level_textures.png-7db4e378d9b9f01204666d7cc6f4424f.s3tc.ctex"
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8njud"]
 resource_name = "grass"
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("2_jjtd3")
+albedo_texture = SubResource("CompressedTexture2D_wm6qv")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_inrni"]

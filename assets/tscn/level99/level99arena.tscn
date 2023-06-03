@@ -1,7 +1,7 @@
 [gd_scene load_steps=508 format=3 uid="uid://04p51kte62jl"]
 
 [ext_resource type="Script" path="res://src/arena.gd" id="1_va6w2"]
-[ext_resource type="Texture2D" uid="uid://ktgp2a8yfxft" path="res://level_99_wiese2.png" id="2_lvrhp"]
+[ext_resource type="Texture2D" uid="uid://ktgp2a8yfxft" path="res://assets/textures/level_textures.png" id="2_lvrhp"]
 
 [sub_resource type="BoxShape3D" id="1"]
 

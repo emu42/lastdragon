@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl520wkdpjwb0"
-path.s3tc="res://.godot/imported/level_02_wiese2.png-3b2e227bdf19e10fac21fc9ec27f3750.s3tc.ctex"
+uid="uid://ktgp2a8yfxft"
+path.s3tc="res://.godot/imported/level_textures.png-7db4e378d9b9f01204666d7cc6f4424f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://level_02_wiese2.png"
-dest_files=["res://.godot/imported/level_02_wiese2.png-3b2e227bdf19e10fac21fc9ec27f3750.s3tc.ctex"]
+source_file="res://assets/textures/level_textures.png"
+dest_files=["res://.godot/imported/level_textures.png-7db4e378d9b9f01204666d7cc6f4424f.s3tc.ctex"]
 
 [params]
 
