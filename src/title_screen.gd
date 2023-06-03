@@ -1,10 +1,10 @@
 extends Control
 
-func _on_new_game_gui_input(_event):
-	get_tree().change_scene("/tscn/level01/level01level.tscn")
-	pass
 
-
-func _on_texture_button_pressed():
-	get_tree().change_scene("/tscn/level01/level01level.tscn")
+func _on_game_start():
+	get_tree().change_scene_to_file("res://assets/tscn/level01/level01level.tscn")
 	pass # Replace with function body.
+
+
+func _on_quit():
+	get_tree().quit()
