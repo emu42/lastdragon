@@ -76,13 +76,11 @@ animation = &"JUMP"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="12"]
 switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="19"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="20"]
 switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachine" id="7"]
 states/DAMAGE/node = SubResource("18")

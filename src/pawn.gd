@@ -149,7 +149,7 @@ func _load_animator_sprite():
 	animator = $Character/AnimationTree.get("parameters/playback")
 	animator.start("IDLE")
 	$Character/AnimationTree.active = true
-	$Character.texture = Utils.get_pawn_sprite(pawn_class)
+	$Character.texture = Utils.get_pawn_sprite(pawn_class - 1)
 	$CharacterStats/NameLabel.text = pawn_name+", the "+String(Utils.PAWN_CLASSES.keys()[pawn_class])
 
 
