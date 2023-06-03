@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="godot-tactical-rpg"
-run/main_scene="res://assets/tscn/test_level.tscn"
+config/name="The Last Dragon"
+run/main_scene="res://assets/tscn/level01/level01level.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://icons/icon.png"
 

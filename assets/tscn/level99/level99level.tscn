@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1021pfhqgaj4"]
+
+[ext_resource type="Script" path="res://src/level.gd" id="1_pnl3m"]
+[ext_resource type="PackedScene" uid="uid://bky8ul2628kxw" path="res://assets/tscn/player_controller_ui.tscn" id="2_e5cia"]
+[ext_resource type="PackedScene" uid="uid://1ujfoei6r514" path="res://assets/tscn/tactics_camera.tscn" id="3_mmqkw"]
+[ext_resource type="PackedScene" uid="uid://04p51kte62jl" path="res://assets/tscn/level99/level99arena.tscn" id="4_7qohi"]
+[ext_resource type="Script" path="res://src/player_controller.gd" id="4_obv67"]
+[ext_resource type="PackedScene" uid="uid://6eofg7n4asn5" path="res://assets/tscn/pawn.tscn" id="5_dd4w8"]
+[ext_resource type="Script" path="res://src/enemy_controller.gd" id="6_djhgw"]
+
+[node name="Level" type="Node3D"]
+script = ExtResource("1_pnl3m")
+
+[node name="PlayerControllerUI" parent="." instance=ExtResource("2_e5cia")]
+
+[node name="TacticsCamera" parent="." instance=ExtResource("3_mmqkw")]
+
+[node name="Arena" parent="." instance=ExtResource("4_7qohi")]
+
+[node name="Player" type="Node3D" parent="."]
+script = ExtResource("4_obv67")
+
+[node name="Pawn" parent="Player" instance=ExtResource("5_dd4w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -3.5)
+pawn_name = "Clark"
+
+[node name="Pawn2" parent="Player" instance=ExtResource("5_dd4w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -3.5)
+pawn_class = 1
+pawn_name = "Diana"
+
+[node name="Pawn3" parent="Player" instance=ExtResource("5_dd4w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -4.5)
+pawn_class = 2
+pawn_name = "Bruno"
+
+[node name="Pawn4" parent="Player" instance=ExtResource("5_dd4w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -4.5)
+pawn_class = 3
+pawn_name = "Shiera"
+
+[node name="Enemy" type="Node3D" parent="."]
+script = ExtResource("6_djhgw")
+
+[node name="Pawn4" parent="Enemy" instance=ExtResource("5_dd4w8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 1, 3.5)
+pawn_class = 4
+pawn_name = "Victor"
+
+[node name="Pawn6" parent="Enemy" instance=ExtResource("5_dd4w8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 1, 4.5)
+pawn_class = 4
+pawn_name = "Garfield"
+
+[node name="Pawn5" parent="Enemy" instance=ExtResource("5_dd4w8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 1, 5.5)
+pawn_class = 6
+pawn_name = "Kori"
+
+[node name="Pawn7" parent="Enemy" instance=ExtResource("5_dd4w8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 1, 4.5)
+pawn_class = 5
+pawn_name = "Ricardo"
