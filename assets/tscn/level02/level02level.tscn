@@ -20,15 +20,62 @@ turn_limit = 10
 script = ExtResource("5_ijkkn")
 
 [node name="Pawn4" parent="Player" instance=ExtResource("6_c5ofe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 1, 1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 1, 4.5)
 pawn_class = 3
-pawn_name = "Shiera"
+pawn_name = "Stubbs"
+
+[node name="Pawn5" parent="Player" instance=ExtResource("6_c5ofe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1, 2.5)
+pawn_class = 4
+pawn_name = "Killroy"
+
+[node name="Pawn6" parent="Player" instance=ExtResource("6_c5ofe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 1, 0.5)
+pawn_class = 4
+pawn_name = "Daedalus"
+
+[node name="Pawn7" parent="Player" instance=ExtResource("6_c5ofe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1, 1.5)
+pawn_class = 4
+pawn_name = "Bonnie"
 
 [node name="Enemy" type="Node3D" parent="."]
 script = ExtResource("7_t1dif")
 
 [node name="Pawn4" parent="Enemy" instance=ExtResource("6_c5ofe")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.5, 1, 1.5)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -13.5, 1, -0.5)
 pawn_name = "Victor"
+
+[node name="Pawn5" parent="Enemy" instance=ExtResource("6_c5ofe")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -13.5, 1, 1.5)
+pawn_name = "Hugo"
+
+[node name="Pawn6" parent="Enemy" instance=ExtResource("6_c5ofe")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -13.5, 1, 3.5)
+pawn_name = "Charles"
+
+[node name="Pawn7" parent="Enemy" instance=ExtResource("6_c5ofe")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -13.5, 1, -2.5)
+pawn_name = "Parzival"
+
+[node name="Pawn8" parent="Enemy" instance=ExtResource("6_c5ofe")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.5, 1, -2.5)
+pawn_class = 2
+pawn_name = "Palladium"
+
+[node name="Pawn9" parent="Enemy" instance=ExtResource("6_c5ofe")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.5, 1, -0.5)
+pawn_class = 2
+pawn_name = "Max"
+
+[node name="Pawn10" parent="Enemy" instance=ExtResource("6_c5ofe")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.5, 1, 1.5)
+pawn_class = 2
+pawn_name = "Thomas"
+
+[node name="Pawn11" parent="Enemy" instance=ExtResource("6_c5ofe")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.5, 1, 3.5)
+pawn_class = 2
+pawn_name = "Cornelius"
 
 [node name="Arena" parent="." instance=ExtResource("7_kix8p")]

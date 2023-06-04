@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cobpiqkq6ctwd"]
+[gd_scene load_steps=8 format=3 uid="uid://cobpiqkq6ctwd"]
 
 [ext_resource type="Texture2D" uid="uid://b2wjwhsx15cvc" path="res://assets/tscn/title/button_story.png" id="1_rbbys"]
 [ext_resource type="Script" path="res://src/title_screen.gd" id="1_vpfap"]
 [ext_resource type="Texture2D" uid="uid://4l7g1jbinkor" path="res://assets/tscn/title/button_newgame.png" id="2_k555v"]
 [ext_resource type="Texture2D" uid="uid://c7cecj1pducvr" path="res://assets/tscn/title/button_quit.png" id="3_ousn7"]
 [ext_resource type="Texture2D" uid="uid://c8o8c0rfhg6cj" path="res://assets/tscn/title/background.png" id="4_21ng4"]
+[ext_resource type="Texture2D" uid="uid://br7xf0o1n8lys" path="res://assets/tscn/title/button_newgame_grey.png" id="4_xyd5v"]
+[ext_resource type="Texture2D" uid="uid://jbt5tdle0ps3" path="res://assets/tscn/title/button_quit_grey.png" id="6_xf4yc"]
 
 [node name="title_screen" type="Control"]
 layout_mode = 3
@@ -44,17 +46,20 @@ layout_mode = 2
 alignment = 1
 
 [node name="Story" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainerOuter/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture_normal = ExtResource("1_rbbys")
 
 [node name="NewGame" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainerOuter/VBoxContainer"]
 custom_minimum_size = Vector2(400, 80)
 layout_mode = 2
-texture_normal = ExtResource("2_k555v")
+texture_normal = ExtResource("4_xyd5v")
+texture_hover = ExtResource("2_k555v")
 
 [node name="Quit" type="TextureButton" parent="MarginContainer/HBoxContainer/VBoxContainerOuter/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("3_ousn7")
+texture_normal = ExtResource("6_xf4yc")
+texture_hover = ExtResource("3_ousn7")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainerOuter/VBoxContainer/NewGame" to="." method="_on_game_start"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainerOuter/VBoxContainer/Quit" to="." method="_on_quit"]

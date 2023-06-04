@@ -93,6 +93,7 @@ func follow_the_path(delta):
 
 
 func adjust_to_center():
+	print_debug(get_tile())
 	move_direction = get_tile().global_transform.origin-global_transform.origin
 	set_velocity(move_direction*SPEED*4)
 	set_up_direction(Vector3.UP)
