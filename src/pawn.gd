@@ -108,7 +108,7 @@ func start_animator():
 
 func apply_movement(delta):
 	if !path_stack.is_empty(): follow_the_path(delta)
-	else: adjust_to_center()
+	#else: adjust_to_center()
 
 
 func do_wait():
