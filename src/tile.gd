@@ -34,7 +34,11 @@ func get_object_above():
 
 
 func is_taken():
-	return get_object_above() != null
+	var entity = get_object_above()
+	if (entity!=null):
+		return entity.curr_health > 0
+	else:
+		return false
 
 
 func reset():
