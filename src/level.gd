@@ -23,6 +23,7 @@ func _ready():
 	ui_control = $PlayerControllerUI
 	player.configure(arena, camera, ui_control)
 	enemy.configure(arena, camera)
+	update_footer()
 
 
 func turn_handler(delta):
@@ -34,6 +35,7 @@ func turn_handler(delta):
 			player.reset()
 			enemy.reset()
 			check_win_lose_conditions()
+			update_footer()
 
 func check_win_lose_conditions():
 	if (!player.has_unit_with_hp()) : 
@@ -46,6 +48,11 @@ func check_win_lose_conditions():
 		win_lose = WIN_LOSE.VICTORY
 		ui_control.set_visibility_of_victory_ui(true)
 	
+func update_footer():
+	if turn_limit == 0:
+		ui_control.update_footer("There is no escape!")
+	else:
+		ui_control.update_footer("Survive " + str(turn_limit-turn_counter) + " more turn(s) to teleport away")
 
 func _physics_process(delta):
 	turn_handler(delta)

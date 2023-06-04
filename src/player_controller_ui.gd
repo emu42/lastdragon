@@ -31,6 +31,8 @@ func is_mouse_hover_button():
 				return true
 	return false
 
+func update_footer(label):
+	$Footer/GoalLabel.text = label
 
 func set_visibility_of_actions_menu(v, p):
 	if !$HBox/Actions.visible: $HBox/Actions/Move.grab_focus()
