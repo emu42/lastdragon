@@ -41,7 +41,7 @@ func check_win_lose_conditions():
 	if (!player.has_unit_with_hp()) : 
 		win_lose = WIN_LOSE.LOSE
 		ui_control.set_visibility_of_lose_ui(true)
-	elif (turn_limit>=0 and turn_counter >= turn_limit) : 
+	elif (turn_limit>0 and turn_counter >= turn_limit) : 
 		win_lose = WIN_LOSE.WIN
 		ui_control.set_visibility_of_win_ui(true)
 	elif (!enemy.has_unit_with_hp()) :
