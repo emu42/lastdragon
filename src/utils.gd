@@ -134,7 +134,7 @@ static func get_pawn_attack_radious(pawn_class):
 		#Necromancer
 		3: return 1
 		4: return 6
-		5: return 2
+		5: return 4
 		#6: return 6
 
 
@@ -158,7 +158,7 @@ static func get_pawn_health(pawn_class):
 		#Necromancer
 		3: return 34
 		4: return 55
-		5: return 41
+		5: return 31
 		#6: return 1350
 
 
