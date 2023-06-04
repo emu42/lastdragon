@@ -10,6 +10,7 @@
 
 [node name="Level" type="Node3D"]
 script = ExtResource("1_6g3r5")
+turn_limit = 10
 
 [node name="PlayerControllerUI" parent="." instance=ExtResource("2_xjdp1")]
 

@@ -18,6 +18,9 @@ func get_act(action : String = ""):
 func get_win_act(action : String):
 	return $WinUI/Actions.get_node(action)
 
+func get_victory_act(action : String):
+	return $VictoryUI/Actions.get_node(action)
+
 func get_lose_act(action : String):
 	return $LoseUI/Actions.get_node(action)
 
@@ -34,6 +37,7 @@ func set_visibility_of_actions_menu(v, p):
 	$HBox/Actions.visible = v
 	if v:
 		set_visibility_of_win_ui(false)
+		set_visibility_of_victory_ui(false)
 		set_visibility_of_lose_ui(false)
 	if !p : return
 	$HBox/Actions/Move.disabled = !p.can_move
@@ -43,6 +47,14 @@ func set_visibility_of_win_ui(v):
 	$WinUI.visible = v
 	if v: 
 		set_visibility_of_actions_menu(false, false)
+		set_visibility_of_victory_ui(false)
+		set_visibility_of_lose_ui(false)
+	
+func set_visibility_of_victory_ui(v):
+	$VictoryUI.visible = v
+	if v: 
+		set_visibility_of_win_ui(false)
+		set_visibility_of_actions_menu(false, false)
 		set_visibility_of_lose_ui(false)
 	
 func set_visibility_of_lose_ui(v):
@@ -50,4 +62,5 @@ func set_visibility_of_lose_ui(v):
 	if v:
 		set_visibility_of_actions_menu(false, false)
 		set_visibility_of_win_ui(false)
+		set_visibility_of_victory_ui(false)
 	
