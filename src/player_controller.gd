@@ -33,6 +33,7 @@ func configure(my_arena : TacticsArena, my_camera : TacticsCamera, my_control : 
 	ui_control.get_act("Cancel").connect("pressed",Callable(self,"player_wants_to_cancel"))
 	ui_control.get_act("Attack").connect("pressed",Callable(self,"player_wants_to_attack"))
 	ui_control.get_win_act("NextLvlButton").connect("pressed",Callable(self,"next_level"))
+	ui_control.get_victory_act("GoBackButton").connect("pressed",Callable(self,"navigate_to_title_screen"))
 	ui_control.get_lose_act("RetryLvlButton").connect("pressed",Callable(self,"reset_level"))
 	ui_control.get_lose_act("GiveUpButton").connect("pressed",Callable(self,"navigate_to_title_screen"))
 

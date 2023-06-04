@@ -1,7 +1,7 @@
 extends Node3D
 class_name TacticsLevel
 
-enum WIN_LOSE {WIN, LOSE, UNDECIDED}
+enum WIN_LOSE {WIN, LOSE, UNDECIDED, VICTORY}
 
 var t_from = null
 var t_to = null
@@ -12,7 +12,7 @@ var arena : TacticsArena
 var camera : TacticsCamera
 var ui_control : TacticsPlayerControllerUI
 var turn_counter = 0
-var turn_limit = 1
+@export var turn_limit : int
 var win_lose = WIN_LOSE.UNDECIDED
 
 func _ready():
@@ -39,9 +39,12 @@ func check_win_lose_conditions():
 	if (!player.has_unit_with_hp()) : 
 		win_lose = WIN_LOSE.LOSE
 		ui_control.set_visibility_of_lose_ui(true)
-	elif (!enemy.has_unit_with_hp() or turn_counter >= turn_limit) : 
+	elif (turn_limit>=0 and turn_counter >= turn_limit) : 
 		win_lose = WIN_LOSE.WIN
 		ui_control.set_visibility_of_win_ui(true)
+	elif (!enemy.has_unit_with_hp()) :
+		win_lose = WIN_LOSE.VICTORY
+		ui_control.set_visibility_of_victory_ui(true)
 	
 
 func _physics_process(delta):
