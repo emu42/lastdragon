@@ -18,6 +18,9 @@ var stage = 0
 
 var ui_control : TacticsPlayerControllerUI = null
 
+var level_list = ["res://assets/tscn/level01/level01level.tscn", 
+	"res://assets/tscn/level02/level02level.tscn", 
+	"res://assets/tscn/level99/level99level.tscn"]
 
 func configure(my_arena : TacticsArena, my_camera : TacticsCamera, my_control : TacticsPlayerControllerUI):
 	arena = my_arena
@@ -70,10 +73,13 @@ func player_wants_to_attack(): stage = 5
 
 # --- user scene transition inputs --- #
 func next_level():
-	get_tree().change_scene_to_file("res://assets/tscn/level02/level02level.tscn")
+	var current_lvl_index = level_list.bsearch(get_tree().current_scene.scene_file_path)
+	if (level_list.size() > current_lvl_index + 1) :
+		var next_scene_file = level_list[current_lvl_index + 1]
+		get_tree().change_scene_to_file(next_scene_file)
 	
 func reset_level():
-	get_tree().change_scene_to_file("res://assets/tscn/level01/level01level.tscn")
+	get_tree().reload_current_scene()
 	
 func navigate_to_title_screen():
 	get_tree().change_scene_to_file("res://assets/tscn/title/title_screen.tscn")
