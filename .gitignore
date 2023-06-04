@@ -17,3 +17,5 @@ data_*/
 docs/img/*.import
 docs/img/tutorials/how-to-create-maps/img/*.import
 
+out
+
