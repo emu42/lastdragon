@@ -153,9 +153,9 @@ text = "Return to Title"
 
 [node name="Footer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 40.0
+offset_left = 240.0
 offset_top = 700.0
-offset_right = 1240.0
+offset_right = 1040.0
 offset_bottom = 780.0
 alignment = 1
 
