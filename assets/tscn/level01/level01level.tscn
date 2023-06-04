@@ -21,21 +21,22 @@ script = ExtResource("1_vh1ak")
 script = ExtResource("5_6vkgp")
 
 [node name="Pawn" parent="Player" instance=ExtResource("6_rbqf3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -3.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, 3.5)
+pawn_class = 4
 pawn_name = "Clark"
 
 [node name="Pawn2" parent="Player" instance=ExtResource("6_rbqf3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -3.5)
-pawn_class = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1, 0.5)
+pawn_class = 4
 pawn_name = "Diana"
 
 [node name="Pawn3" parent="Player" instance=ExtResource("6_rbqf3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -4.5)
-pawn_class = 2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, 0.5)
+pawn_class = 5
 pawn_name = "Bruno"
 
 [node name="Pawn4" parent="Player" instance=ExtResource("6_rbqf3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -4.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, 3.5)
 pawn_class = 3
 pawn_name = "Shiera"
 
@@ -43,21 +44,18 @@ pawn_name = "Shiera"
 script = ExtResource("7_pna2m")
 
 [node name="Pawn4" parent="Enemy" instance=ExtResource("6_rbqf3")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 1, 3.5)
-pawn_class = 4
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.5, 1, 3.5)
 pawn_name = "Victor"
 
 [node name="Pawn6" parent="Enemy" instance=ExtResource("6_rbqf3")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 1, 4.5)
-pawn_class = 4
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.5, 1, 4.5)
 pawn_name = "Garfield"
 
 [node name="Pawn5" parent="Enemy" instance=ExtResource("6_rbqf3")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, 1, 5.5)
-pawn_class = 6
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.5, 1, 5.5)
 pawn_name = "Kori"
 
 [node name="Pawn7" parent="Enemy" instance=ExtResource("6_rbqf3")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 1, 4.5)
-pawn_class = 5
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.5, 1, 4.5)
+pawn_class = 2
 pawn_name = "Ricardo"

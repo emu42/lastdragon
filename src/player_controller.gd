@@ -18,6 +18,9 @@ var stage = 0
 
 var ui_control : TacticsPlayerControllerUI = null
 
+var level_list = ["res://assets/tscn/level01/level01level.tscn", 
+	"res://assets/tscn/level02/level02level.tscn", 
+	"res://assets/tscn/level99/level99level.tscn"]
 
 func configure(my_arena : TacticsArena, my_camera : TacticsCamera, my_control : TacticsPlayerControllerUI):
 	arena = my_arena
@@ -29,6 +32,9 @@ func configure(my_arena : TacticsArena, my_camera : TacticsCamera, my_control : 
 	ui_control.get_act("Wait").connect("pressed",Callable(self,"player_wants_to_wait"))
 	ui_control.get_act("Cancel").connect("pressed",Callable(self,"player_wants_to_cancel"))
 	ui_control.get_act("Attack").connect("pressed",Callable(self,"player_wants_to_attack"))
+	ui_control.get_win_act("NextLvlButton").connect("pressed",Callable(self,"next_level"))
+	ui_control.get_lose_act("RetryLvlButton").connect("pressed",Callable(self,"reset_level"))
+	ui_control.get_lose_act("GiveUpButton").connect("pressed",Callable(self,"navigate_to_title_screen"))
 
 
 func get_mouse_over_object(lmask):
@@ -47,6 +53,10 @@ func can_act():
 		if pawn.can_act(): return true 
 	return stage > 0
 
+func has_unit_with_hp():
+	for pawn in get_children():
+		if pawn.has_hp(): return true
+	return false
 
 func reset():
 	for pawn in get_children(): 
@@ -61,6 +71,18 @@ func player_wants_to_wait():
 	stage = 0
 func player_wants_to_attack(): stage = 5
 
+# --- user scene transition inputs --- #
+func next_level():
+	var current_lvl_index = level_list.bsearch(get_tree().current_scene.scene_file_path)
+	if (level_list.size() > current_lvl_index + 1) :
+		var next_scene_file = level_list[current_lvl_index + 1]
+		get_tree().change_scene_to_file(next_scene_file)
+	
+func reset_level():
+	get_tree().reload_current_scene()
+	
+func navigate_to_title_screen():
+	get_tree().change_scene_to_file("res://assets/tscn/title/title_screen.tscn")
 
 # --- aux stage funcs --- #
 func _aux_select_pawn():
