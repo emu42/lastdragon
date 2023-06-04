@@ -74,15 +74,15 @@ visible = false
 layout_mode = 0
 offset_left = 40.0
 offset_top = 40.0
-offset_right = 1880.0
-offset_bottom = 1040.0
+offset_right = 1240.0
+offset_bottom = 760.0
 alignment = 1
 
 [node name="Label" type="Label" parent="WinUI"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 120
-text = "You Win!"
+text = "You Escaped"
 horizontal_alignment = 1
 
 [node name="Actions" type="HBoxContainer" parent="WinUI"]
@@ -99,15 +99,15 @@ visible = false
 layout_mode = 0
 offset_left = 40.0
 offset_top = 40.0
-offset_right = 1880.0
-offset_bottom = 1040.0
+offset_right = 1240.0
+offset_bottom = 760.0
 alignment = 1
 
 [node name="Label" type="Label" parent="LoseUI"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 120
-text = "You Lose"
+text = "You Are Defeated"
 horizontal_alignment = 1
 
 [node name="Actions" type="HBoxContainer" parent="LoseUI"]
@@ -124,3 +124,29 @@ text = "Retry Level"
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Give Up"
+
+[node name="VictoryUI" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 1240.0
+offset_bottom = 760.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VictoryUI"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 120
+text = "The Princess Is Slain"
+horizontal_alignment = 1
+
+[node name="Actions" type="HBoxContainer" parent="VictoryUI"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+
+[node name="GoBackButton" type="Button" parent="VictoryUI/Actions"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Return to Title"
